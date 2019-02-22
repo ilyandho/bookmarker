@@ -10,8 +10,37 @@
 
     <script src="semantic/dist/semantic.min.js"></script>
   </head>
-  <body>
-    <h1>This is a bookmarking site</h1>
+  <body id="body">
+    <div class="ui segment center">
+      <h1 style="text-align: center">Bookmark your Site</h1>
+    </div>
+    <div class="ui container segment">
+      <form class="ui form" id="myForm">
+        <div class="field">
+          <label>Site Name:</label>
+          <input
+            type="text"
+            name="siteName"
+            placeholder="Site Name"
+            id="siteName"
+          />
+        </div>
+        <div class="field">
+          <label>Site Url</label>
+          <input
+            type="text"
+            name="siteUrl"
+            placeholder="Site Url"
+            id="siteUrl"
+            type="url"
+          />
+        </div>
+
+        <button class="ui primary button centered " type="submit" id="btn">
+          Submit
+        </button>
+      </form>
+    </div>
 
     <script src="./jquery.js"></script>
     <script src="main.js"></script>
