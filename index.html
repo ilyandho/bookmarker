@@ -9,10 +9,26 @@
     <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css" />
 
     <script src="./dist/semantic.min.js"></script>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      li {
+        text-decoration: none;
+        list-style-type: none;
+        list-style: none;
+      }
+      #del {
+        color: red;
+      }
+      body {
+        margin: auto 30%;
+      }
+    </style>
   </head>
-  <body id="body">
+  <body onload="fetchBookmarks()">
     <div class="ui segment center">
-      <h1 style="text-align: center">Bookmark your Site</h1>
+      <h1 style="text-align: center">My Bookmarked Sites</h1>
     </div>
     <div class="ui container segment">
       <form class="ui form" id="myForm">
@@ -36,10 +52,16 @@
           />
         </div>
 
-        <button class="ui primary button centered " type="submit" id="btn">
+        <button class="ui primary button fluid" type="submit" id="btn">
           Submit
         </button>
       </form>
+      <br />
+      <div class="ui container inverted">
+        <div id="bookmarkResults" class="ui segment inverted ">
+          <ul class="ui list"></ul>
+        </div>
+      </div>
     </div>
 
     <script src="jquery.js"></script>
